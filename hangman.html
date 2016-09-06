@@ -1,20 +1,61 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Hangman by Law</title>
-
-	<script src="assets/javascript/game.js"></script>
-	<link rel="stylesheet" href="assets/style/css">
-
+	<title>NFL Hangman</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 </head>
 <body>
-	
-	<div id="game">
-		<p>Guess a letter to start!</p>
-		<p>Missed Guesses:</p>
-	</div>
+	<div class="container">
+		<div class="jumbotron">
+			<div class="container">
+				<h1>Hangman</h1>
+				<h2>Guess the name of the NFC East Team!</h2> 
+				<small>Click any letter to begin...</small>
+			</div>
+		</div>
 
-		
+		<!-- Game counters all held here. Panels are being used to hold various sections. -->
+		<div class="row">
+			<div class="col-lg-12">
+
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title"><strong>Word to Guess</strong></h3>
+					</div>
+					<div class="panel-body">
+						<h3 id="wordblanks">_ _ _ _ _ _ _ _ _ </h3>
+					</div>
+				</div>
+
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<strong>Wrong Guesses: </strong> <span id="wrongGuesses"></span>
+					</div>
+				</div>
+
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<strong>Guesses Left: </strong> <span id="guessesLeft">9</span>
+					</div>
+				</div>
+
+				<div class="panel panel-default">
+					<div class="panel-body">
+
+						<strong>Wins: </strong> <span id="winCounter">0</span>
+					</div>
+				</div>
+			
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<strong>Losses: </strong> <span id="lossCounter">0</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script src="assets/javascript/logic.js"></script>
 </body>
 </html>
